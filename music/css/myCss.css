@@ -1,0 +1,37 @@
+.comments h2,h4{
+	color: white;
+}
+
+.comments p{
+	font-size: 0.8em;
+}
+
+.comment-jumbo{
+	background-color: #FF4719;
+}
+
+.main{
+	background-color: #33CCFF;
+}
+
+.comments a{
+	font-size: 0.7em;
+	color: #66CCFF;
+	margin-right: 5px;	
+}
+
+.comments a img{
+	border-radius: 4px;
+}
+
+.message{
+	max-width: 300px;
+	max-height: 500px;
+	background-color: orange;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
