@@ -35,3 +35,120 @@
 	border-radius: 5px;
 	text-align: center;
 }
+
+#loginMain
+{
+	background-image: url("../img/back.jpg");
+	padding: 30px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	margin-top: 0px;
+	margin-bottom: 100px;
+}
+
+#loginMain strong
+{
+	color: lightyellow;
+}
+
+#loginMain input,button
+{
+	margin: 5px;
+}
+
+#login-fader {
+    background: black;
+    opacity: .5;
+    -moz-opacity: .5;
+    -filter: alpha(opacity=50);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    display: none;
+}
+#login {
+    width: 70%;
+    height: 80%;
+    border: 1px white solid:
+    background: #5a5a5a;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin-top: 50px;
+    z-index: 10;
+}
+
+.mega-wrapper
+{
+	margin-bottom: 30px;
+}
+
+.panel-small
+{
+	width: 2%;
+}
+
+#sidebar,#user-mini-wrapper
+{
+	background-color: #33CCFF;
+	border-radius: 5px;
+	padding: 25px;
+}
+
+@media (min-width: 1200px){
+  #sidebar.affix-top {
+    position: static;
+    width:240px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:22px;
+    width:240px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 975px) and (max-width: 1199px){
+  #sidebar.affix-top {
+    position: static;
+    width:200px;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top:22px;
+    width:200px;
+    margin-bottom: 30px;
+  }
+}
+
+.affix,.affix-top {
+   position:static;
+}
+
+#proyect-wrapper
+{
+	background-color: rgb(30,116,125);
+	border-radius: 2px;
+	padding: 20px;
+}
+
+.proyect{
+	padding: 0px;
+}
+
+.myButton
+{
+	margin-right: 0px;
+}
+
+.midButton
+{
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}

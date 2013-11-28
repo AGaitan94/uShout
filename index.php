@@ -9,13 +9,13 @@
 	include('model/user_file.php');
 
 	$user = new User("carlos");
-	echo '<pre>';
+	//echo '<pre>';
 
-	echo $user->give_username();
-	echo "\n";
-	echo '<img src=' . '"' . $user->give_img_string() . '">';
+	//echo $user->give_username();
+	//echo "\n";
+	//echo '<img src=' . '"' . $user->give_img_string() . '">';
 
-	echo '</pre>';
+	//echo '</pre>';
 
 	//------------------------------------------------------------
 
@@ -116,5 +116,8 @@
 	</div>
 </form>
 </div>
+
+<script type="text/javascript">
+</script>
 
 <?php include('inc/footer.php'); ?>

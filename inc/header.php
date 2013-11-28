@@ -34,7 +34,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.php">Music</a>
+    <a class="navbar-brand" href="index.php">uShout</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling

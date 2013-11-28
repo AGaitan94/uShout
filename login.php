@@ -15,7 +15,7 @@
 
 		if($username == "" or $password == "")
 		{
-			$error = "Please fill out the form completely";
+			$error_message = "Please fill out the form completely";
 		} else {
 			//We need to check the username ad password with the database
 
@@ -47,7 +47,7 @@
             	$_SESSION['username'] = $username;
 				$_SESSION['password'] = $password;
             	
-				header('Location: index.php');
+				header('Location: account.php');
 
             }
 
@@ -60,9 +60,9 @@
 
 ?>
 
-<div class="container">
-	<div class="jumbotron">
-		<p>Log in to <strong>Music</strong></p>
+<div class="container" id="loginMain">
+	<!--<div class="jumbotron">-->
+		<h2>Log in to <strong>uShout</strong></h2>
 		<form method="POST" action="login.php" class="form-inline" role="form">
 			<div class="form-group">
 				<input type="text" name="name" class="form-control" placeholder="Username">
@@ -76,20 +76,24 @@
 				}
 			?>
 		</form>
-	</div>
+		<button onClick="setVisible(true)" type="button" class="btn btn-success">Or sign in for a new Account!</button>
+	<!--</div>-->
 </div>
 
-<div class="container">
+<!--Login area-->
+
+<div id="login-fader" onClick="setVisible(false);reset()">&nbsp;</div>
+<div class="container" id="login" style="display:none;">
 	<div class="jumbotron">
-		<p>Or sign in for your cool account on <strong>Music</strong></p>
-		<br>
+		<p>Sign in for your cool account on <strong>uShout</strong></p>
 		<?php
 				if(isset($error_message_secondary))
 				{
 					echo "<h4 style='color: yellow;'>" . $error_message_secondary . "</h4>";
 				}
 		?>
-		<form class="form-horizontal" role="form" method="POST" action="registrar.php">
+		<p id="error"></p>
+		<form class="form-horizontal" role="form" method="POST"  name="register" action="registrar.php" onSubmit="return(validate())">
 		  <div class="form-group">
 		    <label for="name" class="col-sm-2 control-label">Name</label>
 		    <div class="col-sm-10">
@@ -131,6 +135,60 @@
 		</form>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+	function setVisible(cond)
+	{
+		var elem = document.getElementById("login-fader");
+		var elem2 = document.getElementById("login");
+		if(cond){
+			elem.style.display = "block";
+			elem2.style.display = "block";
+		}
+		else
+		{
+			elem.style.display = "none";
+			elem2.style.display = "none";
+		}	
+	}
+
+	function validate()
+	{
+		var didValidate = true, 
+		error = document.getElementById("error");
+		error.style.color = "red";
+
+		if(document.register.name.value == "")
+		{
+			didValidate = false;
+			error.innerHTML = "Error, information was incorrect";
+		}
+		if(document.register.user.value == "")
+		{
+			didValidate = false;
+			error.innerHTML = "Error, information was incorrect";
+		}
+		if(document.register.pass.value == "")
+		{
+			didValidate = false;
+			error.innerHTML = "Error, information was incorrect";
+		}
+		if(document.register.mail.value == "")
+		{
+			didValidate = false;
+			error.innerHTML = "Error, information was incorrect";
+		}
+
+		return didValidate;
+	}
+
+	function reset()
+	{
+		var error = document.getElementById("error");
+		error.innerHTML = "";
+	}
+</script>
 
 <?php
 	include('inc/footer.php');
